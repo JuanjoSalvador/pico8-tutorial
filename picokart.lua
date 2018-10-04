@@ -17,15 +17,16 @@ function _init()
 	p.y=500
 end
 
---check crash
 function crash()
-	return fget(mget(p.x, p.y), 0)
+	return fget(mget(p.x/8, p.y/8), 0)
 end
 
 function _update()
-	-- autoacelerate
 	if p.y > 16 then
+		sfx(1)
 		p.y-=3
+	else
+		stop("game finished!")
 	end
 		
 	if btn(0) then
@@ -36,9 +37,8 @@ function _update()
 		p.x+=2
 	end
 
-	--crash ends game
 	if crash() then
-		stop()	
+		stop("you crashed! :(")	
 	end
 end
 

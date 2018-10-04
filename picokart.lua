@@ -1,5 +1,9 @@
 --picokart
 
+-- actual code made by me on PICO-8
+-- picokart.p8 contains ALL the code
+-- of the game
+
 p={}
 
 function drawkart()

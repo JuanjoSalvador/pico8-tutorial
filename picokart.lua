@@ -13,7 +13,7 @@ function drawkart()
 end
 
 function _init()
-	p.x=60
+	p.x=55
 	p.y=500
 end
 
